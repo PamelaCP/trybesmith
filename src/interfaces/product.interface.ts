@@ -1,7 +1,7 @@
-type Product = {
+interface Product {
     id?: number,
     name: string,
-    orderId?: number
-};
+    amount: string,
+}
 
 export default Product;
