@@ -14,8 +14,9 @@ export default class ProductModel {
 
 // Requisito 01 Cadastro Produto 
 
-public async create(product: Product): Promisse<ResultSetHeader> => {
-    const result = await connection.execute<ResultSetHeader>('INSERT INTO Trybesmith.Products (name, amount) VALUES (?, ?)'),
+public async create(product: Product): Promise<ResultSetHeader> => {
+    const result = await connection.execute<ResultSetHeader>('INSERT INTO Trybesmith.Products (name, amount) VALUES (?, ?)',
     [name, amount],
+    );
 }
 
