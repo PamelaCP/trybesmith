@@ -3,10 +3,9 @@ import ProductsController from '../controllers/Product.controller';
 
 const router = Router();
 
-const productsController = new ProductsController();
+const Product = new ProductsController();
 
-// const booksController = new BooksController();
+router.post('/products', Product.create);
+router.get('/products', Product.getAll);
 
-router.post('/products', productsController);
-router.get('/products', productsController.create);
 export default router;
