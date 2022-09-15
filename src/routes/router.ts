@@ -7,6 +7,6 @@ const productsController = new ProductsController();
 
 // const booksController = new BooksController();
 
-router.post('/products', productsController.create);
-
+router.post('/products', productsController);
+router.get('/products', productsController.create);
 export default router;
