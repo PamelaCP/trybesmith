@@ -6,7 +6,7 @@ const jwtCheckUser = {
 
   generateToken: (username:string, classe:string, level:number, password: string) => {
     const token = jwt.sign({ username, classe, level, password }, JWT_SECRET, {
-      expiresIn: '1d',
+      expiresIn: '3d',
       algorithm: 'HS256',
     });
     return token;
