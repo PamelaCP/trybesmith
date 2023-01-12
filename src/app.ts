@@ -11,6 +11,7 @@ app.use(express.json());
 app.use('/', productsRouter);
 app.use('/', usersRouter);
 app.use('/', ordersRouter);
+app.use('/', loginRouter);
 
 export default app;
 
